@@ -194,8 +194,58 @@
         "show_vendor": false,
         "padding_top": 50,
         "padding_bottom": 50,
-        "custom_class": "",
+        "custom_class": "vltn-product-slider",
         "animations": "inherit"
+      }
+    },
+    "lookbook_tJHdkL": {
+      "type": "lookbook",
+      "blocks": {
+        "item_wjTYRT": {
+          "type": "item",
+          "settings": {
+            "color_scheme": "",
+            "image": "shopify://shop_images/Lookbook_1.png",
+            "button_text": "Shop this collection",
+            "button_link": "",
+            "button_style": "dark",
+            "top_1": 85,
+            "left_1": 63,
+            "product_1": "scarlett-2-0-milk-chocolate-leather-hobo",
+            "top_2": 48,
+            "left_2": 28,
+            "product_2": "grace-large-east-west-tote",
+            "top_3": 61,
+            "left_3": 48,
+            "product_3": "",
+            "top_4": 0,
+            "left_4": 0,
+            "product_4": "",
+            "top_5": 20,
+            "left_5": 0,
+            "product_5": ""
+          }
+        }
+      },
+      "block_order": [
+        "item_wjTYRT"
+      ],
+      "name": "Lookbook",
+      "settings": {
+        "heading": "Top Picks",
+        "heading_size": "h2",
+        "subheading": "",
+        "description": "",
+        "header_alignment": "center",
+        "container": "container-fluid",
+        "color_scheme": "",
+        "image_aspect_ratio": "original",
+        "use_scroll_mobile": true,
+        "padding_top": 50,
+        "padding_bottom": 50,
+        "custom_class": "vltn-lookbook",
+        "animations": "fade-in-up",
+        "enable_bg_zoom_effect": true
       }
     },
     "custom_content_ywxmG8": {
@@ -891,6 +941,7 @@
     "rich_text_8rJXNh",
     "featured_collection_UiYJfb",
     "featured_product_slider_ybwgrX",
+    "lookbook_tJHdkL",
     "custom_content_ywxmG8",
     "featured_collection_yWbBHr",
     "custom_content_gpEtAy",
