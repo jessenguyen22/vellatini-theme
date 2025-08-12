@@ -137,37 +137,23 @@
             "description": "",
             "product": "vellatini-bag-xi",
             "model_image_1": "shopify://shop_images/Model_4.png",
-            "model_image_2": "shopify://shop_images/Model_3.png",
-            "model_image_3": "shopify://shop_images/Model_2.png"
+            "model_image_2": "shopify://shop_images/Model_3_trans_1cf2e114-795b-4ec7-8c51-fb2556a3d180.png"
           }
         },
-        "product_93VaKF": {
+        "product_AwxDJH": {
           "type": "product",
           "settings": {
             "heading": "",
             "description": "",
             "product": "vellatini-bag-xi",
-            "model_image_1": "shopify://shop_images/Model_1.png",
-            "model_image_2": "shopify://shop_images/Model_3.png",
-            "model_image_3": "shopify://shop_images/Model_2.png"
-          }
-        },
-        "product_iA6wzG": {
-          "type": "product",
-          "settings": {
-            "heading": "",
-            "description": "",
-            "product": "vellatini-bag-xi",
-            "model_image_1": "shopify://shop_images/Model_1.png",
-            "model_image_2": "shopify://shop_images/Model_3.png",
-            "model_image_3": "shopify://shop_images/Model_2.png"
+            "model_image_1": "shopify://shop_images/Model_4.png",
+            "model_image_2": "shopify://shop_images/Model_3_trans_1cf2e114-795b-4ec7-8c51-fb2556a3d180.png"
           }
         }
       },
       "block_order": [
         "product_hUk87A",
-        "product_93VaKF",
-        "product_iA6wzG"
+        "product_AwxDJH"
       ],
       "custom_css": [],
       "name": "Featured products slider",
