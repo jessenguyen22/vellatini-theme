@@ -13,7 +13,7 @@
       "type": "custom-code",
       "name": "Custom css code",
       "settings": {
-        "custom_css": ".m-image-card__img {\n    --aspect-ratio: 1/1 !important\n}\n/* Hoặc có thể dùng class có sẵn */\n.m-hover-box--scale-up:hover .m-image-card__img,\n.m-hover-box--scale-up:hover .m-image-card__img img {\n  transform: scale(1.05);\n}\n.m-hover-box--scale-up .m-image-card__img,\n.m-hover-box--scale-up .m-image-card__img img {\n  transition: transform 2s cubic-bezier(0.25, 0.46, 0.45, 0.94);\n}"
+        "custom_css": ".m-image-card__img {\n    --aspect-ratio: 1/1 !important\n}\n/* Hoặc có thể dùng class có sẵn */\n.m-hover-box--scale-up:hover .m-image-card__img,\n.m-hover-box--scale-up:hover .m-image-card__img img {\n  transform: scale(1.05);\n}\n.m-hover-box--scale-up .m-image-card__img,\n.m-hover-box--scale-up .m-image-card__img img {\n  transition: transform 2s cubic-bezier(0.25, 0.46, 0.45, 0.94);\n}\n\n@media only screen and (min-width: 747px) {\n  .vltn-product-slider .m-product-card__info {\n    text-align: center;\n  }\n  .vltn-product-slider {\n    background-image: url(\"https://cdn.shopify.com/s/files/1/0658/0908/8627/files/Background4.png?v=1754987883\");\n    background-size: cover;\n    background-position: bottom center;\n    background-repeat: no-repeat;\n  }\n  .vltn-product-slider .m-featured-slider__product-item {\n    box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;\n    border: 1px solid #00000052;\n    border-radius: 4px\n}\n}"
       }
     },
     "video_hero_xaeBPJ": {
@@ -169,9 +169,7 @@
         "product_93VaKF",
         "product_iA6wzG"
       ],
-      "custom_css": [
-        "@media only screen and (min-width: 747px) {.vltn-product-slider .m-product-card__info {text-align: center; } .vltn-product-slider {background-image: url(\"https://cdn.shopify.com/s/files/1/0658/0908/8627/files/Background4.png?v=1754987883\"); background-size: cover; background-position: bottom center; background-repeat: no-repeat; } }"
-      ],
+      "custom_css": [],
       "name": "Featured products slider",
       "settings": {
         "heading": "Trending Products",
