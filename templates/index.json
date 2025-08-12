@@ -170,7 +170,7 @@
         "product_iA6wzG"
       ],
       "custom_css": [
-        "@media only screen and (min-width: 747px) {.vltn-product-slider .m-product-card__info {text-align: center; } .vltn-product-slider {background-image: url(\"https://cdn.shopify.com/s/files/1/0658/0908/8627/files/Background2.png?v=1754986740\"); background-size: cover; background-position: bottom center; background-repeat: no-repeat; }}"
+        "@media only screen and (min-width: 747px) {.vltn-product-slider .m-product-card__info {text-align: center; } .vltn-product-slider {background-image: url(\"https://cdn.shopify.com/s/files/1/0658/0908/8627/files/Background1.png?v=1754986394\"); background-size: cover; background-position: bottom center; background-repeat: no-repeat; }}"
       ],
       "name": "Featured products slider",
       "settings": {
