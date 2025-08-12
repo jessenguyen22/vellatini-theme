@@ -46,6 +46,35 @@
     --section-padding-top: {{ section.settings.padding_top }}px;
     --section-padding-bottom: {{ section.settings.padding_bottom }}px;
   }
+
+  .m-featured-slider__img {
+    position: relative;
+    padding-bottom: 30px;
+  }
+
+  .model-image {
+    display: none;
+  }
+
+  .model-image.active {
+    display: block;
+  }
+
+  .model-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .m-featured-slider__buttons {
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    display: flex;
+    gap: 20px;
+  }
 </style>
 
 <section
@@ -150,15 +179,34 @@
                 -%}
 
                 <div
-                  class="m-featured-slider__img swiper-slide m-hover-box m-hover-box--scale-up m:blocks-radius"
+                  class="m-featured-slider__img swiper-slide m:blocks-radius"
                   data-index="{{ forloop.index0 }}"
                   {{ block.shopify_attributes }}
                 >
-                  {% if image == blank %}
-                    {{ 'image' | placeholder_svg_tag: 'm-placeholder-svg' }}
-                  {% else %}
-                    {% render 'responsive-image', image: image %}
-                  {% endif %}
+                  <div class="model-images">
+                    {%- for i in (1..5) -%}
+                      {%- liquid
+                        assign image_key = 'model_image_' | append: i
+                        assign model_image = block.settings[image_key]
+                      -%}
+                      {% if model_image != blank %}
+                        <div
+                          class="model-image {% if forloop.first %}active{% endif %}"
+                          data-model-index="{{ forloop.index0 }}"
+                        >
+                          {% render 'responsive-image', image: model_image %}
+                        </div>
+                      {% endif %}
+                    {%- endfor -%}
+                  </div>
+                  <div class="m-featured-slider__buttons">
+                    <button class="m-button {{ section.settings.button_style }} {{ section.settings.button_size }} change-model-btn">
+                      {{ section.settings.change_model_button_label }}
+                    </button>
+                    <button class="m-button {{ section.settings.button_style }} {{ section.settings.button_size }} next-product-btn">
+                      {{ section.settings.next_product_button_label }}
+                    </button>
+                  </div>
                 </div>
               {% endfor %}
             </div>
@@ -281,6 +329,70 @@
           "label": "Right"
         }
       ]
+    },
+    {
+      "type": "header",
+      "content": "Buttons"
+    },
+    {
+      "type": "text",
+      "id": "change_model_button_label",
+      "label": "Change model button label",
+      "default": "Change Model"
+    },
+    {
+      "type": "text",
+      "id": "next_product_button_label",
+      "label": "Next product button label",
+      "default": "Next Product"
+    },
+    {
+      "type": "select",
+      "id": "button_style",
+      "label": "Button style",
+      "options": [
+        {
+          "value": "m-button--primary",
+          "label": "Primary button"
+        },
+        {
+          "value": "m-button--secondary",
+          "label": "Secondary button"
+        },
+        {
+          "value": "m-button--white",
+          "label": "White button"
+        },
+        {
+          "value": "m-button--link",
+          "label": "Underline button"
+        }
+      ],
+      "default": "m-button--primary"
+    },
+    {
+      "type": "select",
+      "id": "button_size",
+      "label": "Button size",
+      "options": [
+        {
+          "value": "m-button--small",
+          "label": "Button small"
+        },
+        {
+          "value": "",
+          "label": "Button medium"
+        },
+        {
+          "value": "m-button--large",
+          "label": "Button large"
+        }
+      ],
+      "default": ""
+    },
+    {
+      "type": "header",
+      "content": "Model Image Settings"
     },
     {
       "type": "header",
@@ -509,6 +621,35 @@
           "type": "image_picker",
           "id": "image",
           "label": "Featured image"
+        },
+        {
+          "type": "header",
+          "content": "Model Images"
+        },
+        {
+          "type": "image_picker",
+          "id": "model_image_1",
+          "label": "Model Image 1"
+        },
+        {
+          "type": "image_picker",
+          "id": "model_image_2",
+          "label": "Model Image 2"
+        },
+        {
+          "type": "image_picker",
+          "id": "model_image_3",
+          "label": "Model Image 3"
+        },
+        {
+          "type": "image_picker",
+          "id": "model_image_4",
+          "label": "Model Image 4"
+        },
+        {
+          "type": "image_picker",
+          "id": "model_image_5",
+          "label": "Model Image 5"
         }
       ]
     }

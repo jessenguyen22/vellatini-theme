@@ -16,6 +16,43 @@ if (!customElements.get("m-featured-slider")) {
 
     connectedCallback() {
       this.initSlider();
+      this.initModelChanger();
+    }
+
+    initModelChanger() {
+      const changeModelBtns = this.querySelectorAll('.change-model-btn');
+      const nextProductBtns = this.querySelectorAll('.next-product-btn');
+
+      changeModelBtns.forEach(btn => {
+        btn.addEventListener('click', (event) => {
+          const slide = event.target.closest('.m-featured-slider__img');
+          if (!slide) return;
+
+          const modelImages = slide.querySelectorAll('.model-image');
+          if (modelImages.length <= 1) return;
+
+          const activeImage = slide.querySelector('.model-image.active');
+          const allImages = Array.from(modelImages);
+          const currentIndex = allImages.indexOf(activeImage);
+
+          activeImage.classList.remove('active');
+
+          let nextIndex = currentIndex + 1;
+          if (nextIndex >= allImages.length) {
+            nextIndex = 0;
+          }
+
+          allImages[nextIndex].classList.add('active');
+        });
+      });
+
+      nextProductBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          if (this.slider) {
+            this.slider.slideNext();
+          }
+        });
+      });
     }
 
     initSlider() {
@@ -26,7 +63,7 @@ if (!customElements.get("m-featured-slider")) {
 
       this.slider = new MinimogLibs.Swiper(this.domNodes.sliderContainer, {
         speed: 400,
-        loop: false,
+        loop: true,
         autoplay: autoplay
           ? {
               delay: parseInt(timeout),
@@ -53,7 +90,7 @@ if (!customElements.get("m-featured-slider")) {
       // Sync 2 sliders
       this.imageSlider = new MinimogLibs.Swiper(this.domNodes.slideImagesContainer, {
         speed: 500,
-        loop: false,
+        loop: true,
         effect: "fade",
         fadeEffect: {
           crossFade: true,
