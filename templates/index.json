@@ -261,7 +261,7 @@
         "expanded": true,
         "card_style": "boxed",
         "text_alignment": "center",
-        "hover_effect": "scaling-down",
+        "hover_effect": "none",
         "show_product_count": true,
         "count_inline_title": true,
         "image_rounded": false,
@@ -279,7 +279,7 @@
         "padding_top": 50,
         "padding_bottom": 50,
         "custom_class": "",
-        "animations": "inherit"
+        "animations": "fade-in-right"
       }
     },
     "lookbook_tJHdkL": {
