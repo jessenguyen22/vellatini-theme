@@ -65,6 +65,7 @@
       "block_order": [
         "text_tfJDdg"
       ],
+      "disabled": true,
       "custom_css": [
         "@media only screen and (min-width: 747px) {p {font-size: 21px; }}",
         "@media only screen and (max-width: 747px) {p {font-size: 19px; }}"
@@ -82,6 +83,7 @@
     },
     "featured_collection_UiYJfb": {
       "type": "featured-collection",
+      "disabled": true,
       "custom_css": [
         ".m-product-card__title {font-family: var(--font-stack-body); font-size: 13px;}",
         ".m-featured-collection__button {margin-top: 10px;}",
@@ -169,12 +171,12 @@
       ],
       "name": "Featured products slider",
       "settings": {
-        "heading": "Featured products",
+        "heading": "Trending Products",
         "heading_size": "h3",
         "subheading": "",
         "description": "",
         "header_alignment": "center",
-        "container": "container-fluid",
+        "container": "container",
         "color_scheme": "",
         "image_placement": "left",
         "change_model_button_label": "Change Model",
