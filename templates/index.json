@@ -185,6 +185,103 @@
         "animations": "inherit"
       }
     },
+    "collection_list_Fa3Ma3": {
+      "type": "collection-list",
+      "blocks": {
+        "collection_block_LzdzL7": {
+          "type": "collection_block",
+          "settings": {
+            "collection": "crossbody-bags",
+            "title": "Tote Bags",
+            "item_image": "shopify://shop_images/Model_C_1.png"
+          }
+        },
+        "collection_block_VTVrQk": {
+          "type": "collection_block",
+          "settings": {
+            "collection": "work-bags",
+            "title": "Crossbody Bags",
+            "item_image": "shopify://shop_images/Model_C_5.png"
+          }
+        },
+        "collection_block_nxm3cw": {
+          "type": "collection_block",
+          "settings": {
+            "collection": "",
+            "title": "Clutches",
+            "item_image": "shopify://shop_images/Model_C_3.png"
+          }
+        },
+        "collection_block_CXXh8t": {
+          "type": "collection_block",
+          "settings": {
+            "collection": "",
+            "title": "Shoulder Bags",
+            "item_image": "shopify://shop_images/Model_C_2.png"
+          }
+        },
+        "collection_block_j6cYGn": {
+          "type": "collection_block",
+          "settings": {
+            "collection": "",
+            "title": "Work Bags",
+            "item_image": "shopify://shop_images/Model_C_4.png"
+          }
+        },
+        "collection_block_d39LTJ": {
+          "type": "collection_block",
+          "settings": {
+            "collection": "",
+            "title": "Backpacks",
+            "item_image": "shopify://shop_images/Model_C_4.png"
+          }
+        }
+      },
+      "block_order": [
+        "collection_block_LzdzL7",
+        "collection_block_VTVrQk",
+        "collection_block_nxm3cw",
+        "collection_block_CXXh8t",
+        "collection_block_j6cYGn",
+        "collection_block_d39LTJ"
+      ],
+      "name": "Collection list",
+      "settings": {
+        "heading": "Shop by collections",
+        "heading_size": "h3",
+        "subheading": "",
+        "description": "",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "m-button--primary",
+        "header_alignment": "center",
+        "color_scheme": "",
+        "container": "container-fluid",
+        "layout": "grid",
+        "expanded": true,
+        "card_style": "boxed",
+        "text_alignment": "center",
+        "hover_effect": "scaling-down",
+        "show_product_count": true,
+        "count_inline_title": true,
+        "image_rounded": false,
+        "items_per_row": 3,
+        "item_gap": 0,
+        "enable_slider": true,
+        "show_pagination": false,
+        "show_navigation": false,
+        "autorotate": true,
+        "autorotate_speed": 4,
+        "mobile_disable_slider": false,
+        "use_scroll_mobile": true,
+        "mobile_gap": 10,
+        "hidden_slide_control_mobile": false,
+        "padding_top": 50,
+        "padding_bottom": 50,
+        "custom_class": "",
+        "animations": "inherit"
+      }
+    },
     "lookbook_tJHdkL": {
       "type": "lookbook",
       "blocks": {
@@ -217,6 +314,7 @@
       "block_order": [
         "item_wjTYRT"
       ],
+      "disabled": true,
       "custom_css": [
         "@media only screen and (min-width: 747px) {.vltn-lookbook .m-lookbook-card__heading {text-align: center; }}"
       ],
@@ -931,6 +1029,7 @@
     "rich_text_8rJXNh",
     "featured_collection_UiYJfb",
     "featured_product_slider_ybwgrX",
+    "collection_list_Fa3Ma3",
     "lookbook_tJHdkL",
     "custom_content_ywxmG8",
     "featured_collection_yWbBHr",
