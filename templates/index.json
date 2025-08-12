@@ -136,7 +136,7 @@
             "heading": "",
             "description": "",
             "product": "vellatini-bag-xi",
-            "model_image_1": "shopify://shop_images/Model_1.png",
+            "model_image_1": "shopify://shop_images/Model_3_trans_1cf2e114-795b-4ec7-8c51-fb2556a3d180.png",
             "model_image_2": "shopify://shop_images/Model_3.png",
             "model_image_3": "shopify://shop_images/Model_2.png"
           }
@@ -170,7 +170,7 @@
         "product_iA6wzG"
       ],
       "custom_css": [
-        "@media only screen and (min-width: 747px) {.vltn-product-slider .m-product-card__info {text-align: center;}}"
+        "@media only screen and (min-width: 747px) {.vltn-product-slider .m-product-card__info {text-align: center; } .vltn-product-slider {background-image: url(\"https://cdn.shopify.com/s/files/1/0658/0908/8627/files/Background2.png?v=1754986740\"); background-size: cover; background-position: bottom center; background-repeat: no-repeat; }}"
       ],
       "name": "Featured products slider",
       "settings": {
@@ -182,9 +182,9 @@
         "container": "container",
         "color_scheme": "",
         "image_placement": "left",
-        "change_model_button_label": "Change Model",
-        "next_product_button_label": "Next Product",
-        "button_style": "m-button--link",
+        "change_model_button_label": "Model",
+        "next_product_button_label": "Next",
+        "button_style": "m-button--white",
         "button_size": "m-button--small",
         "slide_autoplay": false,
         "show_navigation": false,
