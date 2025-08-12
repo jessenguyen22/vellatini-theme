@@ -279,7 +279,7 @@
         "hidden_slide_control_mobile": false,
         "padding_top": 50,
         "padding_bottom": 50,
-        "custom_class": "",
+        "custom_class": "vltn-collection-list",
         "animations": "fade-in-right"
       }
     },
