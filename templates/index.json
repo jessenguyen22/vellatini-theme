@@ -247,7 +247,7 @@
         "collection_block_d39LTJ"
       ],
       "custom_css": [
-        "@media only screen and (min-width: 747px) {.vltn-collection-list .m-collection-card__image {border-left: 1px solid #c1bdbd; }}"
+        "@media only screen and (min-width: 747px) {.vltn-collection-list .m-collection-card__image {border-left: 1px solid #c1bdbd; } .vltn-collection-list .m-collection-card__info {width: 90%; border-top: 1px solid #bbbbbb; margin: 0 auto; margin-top: 20px; }}"
       ],
       "name": "Collection list",
       "settings": {
@@ -266,7 +266,7 @@
         "card_style": "standard",
         "text_alignment": "center",
         "hover_effect": "none",
-        "show_product_count": true,
+        "show_product_count": false,
         "count_inline_title": false,
         "image_rounded": false,
         "items_per_row": 5,
