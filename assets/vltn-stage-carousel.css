@@ -1,0 +1,84 @@
+.vltn-circular-carousel {
+  position: relative;
+  padding: 40px 0;
+}
+
+.vltn-circular-carousel__header {
+  margin-bottom: 50px;
+}
+
+.vltn-circular-carousel__stage {
+  height: 700px; /* Increased height to prevent overlap */
+  width: 100%;
+  position: relative;
+  perspective: 1500px;
+}
+
+.vltn-circular-carousel__container {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transform-style: preserve-3d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.vltn-circular-carousel__item {
+  position: absolute;
+  width: 400px; /* Base width */
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.vltn-circular-carousel__item img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.vltn-circular-carousel__title {
+  font-size: 16px;
+  font-weight: 500;
+  color: rgb(var(--color-foreground));
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  text-align: center;
+}
+
+.vltn-circular-carousel__item.active .vltn-circular-carousel__title {
+  opacity: 1;
+}
+
+.vltn-circular-carousel__nav {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+  padding: 0 20px;
+  pointer-events: none; /* Allow clicks to go through to items */
+}
+
+.vltn-circular-carousel__button--prev,
+.vltn-circular-carousel__button--next {
+  pointer-events: all; /* Make buttons clickable */
+}
+
+.vltn-circular-carousel__button--prev,
+.vltn-circular-carousel__button--next {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: all; /* Make buttons clickable */
+}
