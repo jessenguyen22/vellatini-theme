@@ -1,6 +1,3 @@
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
-
 {{ 'vltn-stage-carousel.css' | asset_url | stylesheet_tag }}
 
 <div
@@ -9,7 +6,6 @@
   data-section-id="{{ section.id }}"
   data-radius-x="{{ section.settings.radius_x }}"
   data-radius-y="{{ section.settings.radius_y }}"
-  data-scroll-animation="{{ section.settings.scroll_animation }}"
   style="--section-padding-top: {{ section.settings.padding_top }}px; --section-padding-bottom: {{ section.settings.padding_bottom }}px;
   {% if section.settings.background_image %}
     background-image: url('{{ section.settings.background_image | image_url }}');
@@ -140,12 +136,6 @@
     {
       "type": "header",
       "content": "Animation"
-    },
-    {
-      "type": "checkbox",
-      "id": "scroll_animation",
-      "label": "Enable scroll animation",
-      "default": true
     },
     {
       "type": "header",

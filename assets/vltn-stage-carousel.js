@@ -12,19 +12,13 @@ class CircularCarousel {
     this.currentIndex = 0;
     this.radiusX = parseInt(this.element.dataset.radiusX, 10) || 600;
     this.radiusY = parseInt(this.element.dataset.radiusY, 10) || 100;
-    this.scrollAnimation = this.element.dataset.scrollAnimation === 'true';
-    
     this.init();
   }
 
   init() {
-    if (this.scrollAnimation) {
-      this.initScrollAnimation();
-    } else {
-      this.nextButton.addEventListener('click', () => this.rotate(1));
-      this.prevButton.addEventListener('click', () => this.rotate(-1));
-      this.layout();
-    }
+    this.nextButton.addEventListener('click', () => this.rotate(1));
+    this.prevButton.addEventListener('click', () => this.rotate(-1));
+    this.layout();
   }
 
   rotate(direction) {
@@ -32,12 +26,11 @@ class CircularCarousel {
     this.layout();
   }
 
-  layout(progress = 0) {
+  layout() {
     const angleIncrement = (2 * Math.PI) / this.totalItems;
     
     this.items.forEach((item, i) => {
-      const rotationOffset = progress * this.totalItems;
-      const itemIndex = (i - this.currentIndex - rotationOffset + this.totalItems) % this.totalItems;
+      const itemIndex = (i - this.currentIndex + this.totalItems) % this.totalItems;
       const angle = itemIndex * angleIncrement;
 
       const x = this.radiusX * Math.sin(angle);
@@ -51,7 +44,7 @@ class CircularCarousel {
       item.style.opacity = opacity;
 
       const title = item.querySelector('.vltn-circular-carousel__title');
-      const frontIndex = (Math.round(this.currentIndex + rotationOffset) % this.totalItems + this.totalItems) % this.totalItems;
+      const frontIndex = (Math.round(this.currentIndex) % this.totalItems + this.totalItems) % this.totalItems;
       
       if (i === frontIndex) {
         item.classList.add('active');
@@ -61,35 +54,11 @@ class CircularCarousel {
     });
   }
 
-  initScrollAnimation() {
-    gsap.registerPlugin(ScrollTrigger);
-    
-    // Hide nav buttons in scroll mode
-    if(this.nextButton) this.nextButton.style.display = 'none';
-    if(this.prevButton) this.prevButton.style.display = 'none';
-
-    const timeline = gsap.timeline({
-      scrollTrigger: {
-        trigger: this.element,
-        pin: true,
-        scrub: 1,
-        start: "top top",
-        end: `+=${this.totalItems * 200}`, // Adjust duration of scroll
-        onUpdate: (self) => {
-          this.layout(self.progress);
-        },
-      },
-    });
-  }
 }
 
 function initializeCarousels() {
-    if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
-        const carousels = document.querySelectorAll('.vltn-circular-carousel');
-        carousels.forEach(carousel => new CircularCarousel(carousel));
-    } else {
-        setTimeout(initializeCarousels, 100);
-    }
+    const carousels = document.querySelectorAll('.vltn-circular-carousel');
+    carousels.forEach(carousel => new CircularCarousel(carousel));
 }
 
 document.addEventListener('DOMContentLoaded', initializeCarousels);

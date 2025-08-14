@@ -1,0 +1,210 @@
+{% comment %}
+  Section: New Arrivals
+  - Rebuilt from Code_Example
+{% endcomment %}
+
+{%- capture slides_data -%}
+[
+  {%- for block in section.blocks -%}
+    {%- if block.type == 'product' and block.settings.product != blank -%}
+      {%- assign product = block.settings.product -%}
+      {%- assign image_left = block.settings.featured_image_left -%}
+      {%- assign image_right = block.settings.featured_image_right -%}
+      {
+        "title": {{ product.title | json }},
+        "id": {{ product.id | json }},
+        "price": {{ product.price | money | json }},
+        "product_image": {{ product.featured_image | image_url: width: 800 | json }},
+        "image_left": {{ image_left | image_url: width: 800 | json }},
+        "image_right": {{ image_right | image_url: width: 800 | json }},
+        "url": {{ product.url | json }}
+      }
+    {%- endif -%}
+    {%- unless forloop.last -%},{%- endunless -%}
+  {%- endfor -%}
+]
+{%- endcapture -%}
+
+<style>
+  .section-new-arrivals {
+    --background-color: {{ section.settings.background_color }};
+    --text-color: {{ section.settings.text_color }};
+  }
+</style>
+
+{{ 'vltn-new-arrivals.css' | asset_url | stylesheet_tag }}
+
+<div class="new-arrivals-container" style="background-color: var(--background-color);">
+  <div class="new-arrivals-heading">
+    <h2>{{ section.settings.title }}</h2>
+  </div>
+  <div class="slider"></div>
+  <div class="new-arrivals-outro">
+    <h3>{{ section.settings.outro_text }}</h3>
+    <a href="{{ section.settings.outro_button_link }}" class="m-button {{ section.settings.button_style }} {{ section.settings.button_size }}">{{ section.settings.outro_button_text }}</a>
+  </div>
+  <div class="white-reveal-overlay"></div>
+</div>
+
+<script type="application/json" data-slides>
+  {{ slides_data }}
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" defer="defer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer="defer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer="defer"></script>
+<script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js" defer="defer"></script>
+<script src="{{ 'vltn-new-arrivals.js' | asset_url }}" defer="defer"></script>
+
+<script id="vertexShader" type="x-shader/x-vertex">
+  void main() {
+      gl_Position = vec4(position, 1.0);
+  }
+</script>
+<script id="fragmentShader" type="x-shader/x-fragment">
+  uniform vec2 iResolution;
+  uniform float iTime;
+  uniform float scrollOffset;
+
+  void mainImage(out vec4 o, vec2 I) {
+      I -= o.zw = iResolution.xy / 2.0;
+      float t = scrollOffset * 200.0;
+      float pattern = sin(atan(I.y, I.x) / 0.1) * sin(20.0 * (o.w /= length(I)) + t) - 1.0 + o.w;
+
+      float monochrome = 1.0 - pattern * 0.5;
+
+      float invertedMonochrome = 1.0 - monochrome;
+
+      o = vec4(invertedMonochrome, invertedMonochrome, invertedMonochrome, 1.0);
+  }
+
+  void main() {
+      mainImage(gl_FragColor, gl_FragCoord.xy);
+  }
+</script>
+
+{% schema %}
+{
+  "name": "New Arrivals",
+  "class": "section-new-arrivals",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "New Arrivals"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background Color",
+      "default": "rgba(0,0,0,0)"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text Color",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "header",
+      "content": "Outro"
+    },
+    {
+      "type": "text",
+      "id": "outro_text",
+      "label": "Outro Text",
+      "default": "Explore the full collection"
+    },
+    {
+      "type": "text",
+      "id": "outro_button_text",
+      "label": "Outro Button Text",
+      "default": "View All"
+    },
+    {
+      "type": "url",
+      "id": "outro_button_link",
+      "label": "Outro Button Link"
+    },
+    {
+      "type": "select",
+      "id": "button_style",
+      "label": "Button style",
+      "options": [
+        {
+          "value": "m-button--primary",
+          "label": "Primary button"
+        },
+        {
+          "value": "m-button--secondary",
+          "label": "Secondary button"
+        },
+        {
+          "value": "m-button--white",
+          "label": "White button"
+        },
+        {
+          "value": "m-button--link",
+          "label": "Underline button"
+        }
+      ],
+      "default": "m-button--primary"
+    },
+    {
+      "type": "select",
+      "id": "button_size",
+      "label": "Button size",
+      "options": [
+        {
+          "value": "m-button--small",
+          "label": "Button small"
+        },
+        {
+          "value": "",
+          "label": "Button medium"
+        },
+        {
+          "value": "m-button--large",
+          "label": "Button large"
+        }
+      ],
+      "default": ""
+    }
+  ],
+  "blocks": [
+    {
+      "type": "product",
+      "name": "Product",
+      "settings": [
+        {
+          "type": "product",
+          "id": "product",
+          "label": "Product (Center)"
+        },
+        {
+          "type": "image_picker",
+          "id": "featured_image_left",
+          "label": "Featured Image (Left)"
+        },
+        {
+          "type": "image_picker",
+          "id": "featured_image_right",
+          "label": "Featured Image (Right)"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "New Arrivals",
+      "blocks": [
+        { "type": "product" },
+        { "type": "product" },
+        { "type": "product" },
+        { "type": "product" }
+      ]
+    }
+  ]
+}
+{% endschema %}
