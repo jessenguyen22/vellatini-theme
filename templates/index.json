@@ -220,6 +220,7 @@
         "product_hUk87A",
         "product_AwxDJH"
       ],
+      "disabled": true,
       "custom_css": [],
       "name": "Featured products slider",
       "settings": {
@@ -250,159 +251,50 @@
         "animations": "inherit"
       }
     },
-    "collection_list_Fa3Ma3": {
-      "type": "collection-list",
+    "vltn_new_arrivals_YFX48N": {
+      "type": "vltn-new-arrivals",
       "blocks": {
-        "collection_block_LzdzL7": {
-          "type": "collection_block",
+        "product_ydzicR": {
+          "type": "product",
           "settings": {
-            "collection": "crossbody-bags",
-            "title": "Tote Bags",
-            "item_image": "shopify://shop_images/Model_C_1.png"
+            "product": "bella-black-2-in-1-convertible-medium-backpack-tote"
           }
         },
-        "collection_block_VTVrQk": {
-          "type": "collection_block",
+        "product_6nAxNT": {
+          "type": "product",
           "settings": {
-            "collection": "work-bags",
-            "title": "Crossbody Bags",
-            "item_image": "shopify://shop_images/Model_C_5.png"
+            "product": "eden-brown-suede-shoulder-bag"
           }
         },
-        "collection_block_nxm3cw": {
-          "type": "collection_block",
+        "product_ewWMQy": {
+          "type": "product",
           "settings": {
-            "collection": "",
-            "title": "Clutches",
-            "item_image": "shopify://shop_images/Model_C_3.png"
+            "product": "mia-leather-east-west-slouchy-tote"
           }
         },
-        "collection_block_CXXh8t": {
-          "type": "collection_block",
+        "product_yVpULg": {
+          "type": "product",
           "settings": {
-            "collection": "",
-            "title": "Shoulder Bags",
-            "item_image": "shopify://shop_images/Model_C_2.png"
-          }
-        },
-        "collection_block_j6cYGn": {
-          "type": "collection_block",
-          "settings": {
-            "collection": "",
-            "title": "Work Bags",
-            "item_image": "shopify://shop_images/Model_C_4.png"
-          }
-        },
-        "collection_block_d39LTJ": {
-          "type": "collection_block",
-          "disabled": true,
-          "settings": {
-            "collection": "",
-            "title": "Backpacks",
-            "item_image": "shopify://shop_images/Model_C_4.png"
+            "product": "margot-xl-woven-tote"
           }
         }
       },
       "block_order": [
-        "collection_block_LzdzL7",
-        "collection_block_VTVrQk",
-        "collection_block_nxm3cw",
-        "collection_block_CXXh8t",
-        "collection_block_j6cYGn",
-        "collection_block_d39LTJ"
+        "product_ydzicR",
+        "product_6nAxNT",
+        "product_ewWMQy",
+        "product_yVpULg"
       ],
-      "custom_css": [
-        "@media only screen and (min-width: 747px) {.vltn-collection-list .m-collection-card__image {border-left: 1px solid #c1bdbd; } .vltn-collection-list .m-collection-card__info {width: 90%; border-top: 1px solid #bbbbbb; margin: 0 auto; margin-top: 20px; }}"
-      ],
-      "name": "Collection list",
+      "name": "New Arrivals",
       "settings": {
-        "heading": "Shop by collections",
-        "heading_size": "h3",
-        "subheading": "",
-        "description": "",
-        "button_label": "",
-        "button_link": "",
+        "title": "New Arrivals",
+        "background_color": "rgba(0,0,0,0)",
+        "text_color": "#FFFFFF",
+        "outro_text": "Explore the full collection",
+        "outro_button_text": "View All",
+        "outro_button_link": "",
         "button_style": "m-button--primary",
-        "header_alignment": "center",
-        "color_scheme": "",
-        "container": "w-full",
-        "layout": "grid",
-        "expanded": false,
-        "card_style": "standard",
-        "text_alignment": "center",
-        "hover_effect": "none",
-        "show_product_count": false,
-        "count_inline_title": false,
-        "image_rounded": false,
-        "items_per_row": 5,
-        "item_gap": 0,
-        "enable_slider": false,
-        "show_pagination": false,
-        "show_navigation": false,
-        "autorotate": true,
-        "autorotate_speed": 4,
-        "mobile_disable_slider": false,
-        "use_scroll_mobile": true,
-        "mobile_gap": 10,
-        "hidden_slide_control_mobile": false,
-        "padding_top": 50,
-        "padding_bottom": 50,
-        "custom_class": "vltn-collection-list",
-        "animations": "fade-in-right"
-      }
-    },
-    "lookbook_tJHdkL": {
-      "type": "lookbook",
-      "blocks": {
-        "item_wjTYRT": {
-          "type": "item",
-          "settings": {
-            "color_scheme": "",
-            "image": "shopify://shop_images/Lookbook_1.png",
-            "button_text": "Shop this collection",
-            "button_link": "",
-            "button_style": "dark",
-            "top_1": 85,
-            "left_1": 63,
-            "product_1": "scarlett-2-0-milk-chocolate-leather-hobo",
-            "top_2": 48,
-            "left_2": 28,
-            "product_2": "grace-large-east-west-tote",
-            "top_3": 61,
-            "left_3": 48,
-            "product_3": "",
-            "top_4": 0,
-            "left_4": 0,
-            "product_4": "",
-            "top_5": 20,
-            "left_5": 0,
-            "product_5": ""
-          }
-        }
-      },
-      "block_order": [
-        "item_wjTYRT"
-      ],
-      "disabled": true,
-      "custom_css": [
-        "@media only screen and (min-width: 747px) {.vltn-lookbook .m-lookbook-card__heading {text-align: center; }}"
-      ],
-      "name": "Lookbook",
-      "settings": {
-        "heading": "Top Picks",
-        "heading_size": "h2",
-        "subheading": "",
-        "description": "",
-        "header_alignment": "center",
-        "container": "container-fluid",
-        "color_scheme": "",
-        "image_aspect_ratio": "original",
-        "use_scroll_mobile": true,
-        "padding_top": 50,
-        "padding_bottom": 50,
-        "custom_class": "vltn-lookbook",
-        "animations": "fade-in-up",
-        "enable_bg_zoom_effect": true
+        "button_size": ""
       }
     },
     "custom_content_ywxmG8": {
@@ -1099,8 +991,7 @@
     "featured_collection_UiYJfb",
     "vltn_stage_carousel_RtGVfX",
     "featured_product_slider_ybwgrX",
-    "collection_list_Fa3Ma3",
-    "lookbook_tJHdkL",
+    "vltn_new_arrivals_YFX48N",
     "custom_content_ywxmG8",
     "featured_collection_yWbBHr",
     "custom_content_gpEtAy",
