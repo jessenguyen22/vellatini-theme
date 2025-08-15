@@ -127,6 +127,71 @@
         "animations": "inherit"
       }
     },
+    "vltn_stage_carousel_RtGVfX": {
+      "type": "vltn-stage-carousel",
+      "blocks": {
+        "collection_FrXiQU": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "image": "shopify://shop_images/Model_C_3.png",
+            "title": "Work Bags"
+          }
+        },
+        "collection_ryUeTV": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "image": "shopify://shop_images/Model_C_2.png",
+            "title": "Work Bags"
+          }
+        },
+        "collection_H8hYBV": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "image": "shopify://shop_images/Model_C_5.png",
+            "title": "Work Bags"
+          }
+        },
+        "collection_kQt8V7": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "image": "shopify://shop_images/Model_C_1.png",
+            "title": "Work Bags"
+          }
+        },
+        "collection_tVGxnn": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "image": "shopify://shop_images/Model_C_4.png",
+            "title": "Work Bags"
+          }
+        }
+      },
+      "block_order": [
+        "collection_FrXiQU",
+        "collection_ryUeTV",
+        "collection_H8hYBV",
+        "collection_kQt8V7",
+        "collection_tVGxnn"
+      ],
+      "name": "VLTN Circular Carousel",
+      "settings": {
+        "heading": "Shop by collections",
+        "heading_size": "h3",
+        "subheading": "",
+        "header_alignment": "center",
+        "container": "container-fluid",
+        "radius_x": 800,
+        "radius_y": 100,
+        "color_scheme": "",
+        "padding_top": 50,
+        "padding_bottom": 50
+      }
+    },
     "featured_product_slider_ybwgrX": {
       "type": "featured-product-slider",
       "blocks": {
@@ -1032,6 +1097,7 @@
     "video_hero_xaeBPJ",
     "rich_text_8rJXNh",
     "featured_collection_UiYJfb",
+    "vltn_stage_carousel_RtGVfX",
     "featured_product_slider_ybwgrX",
     "collection_list_Fa3Ma3",
     "lookbook_tJHdkL",
