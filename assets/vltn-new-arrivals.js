@@ -4,12 +4,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const slidesData = JSON.parse(container.querySelector("[data-slides]").innerHTML) || [];
 
-  const lenis = new Lenis();
-  lenis.on("scroll", ScrollTrigger.update);
-  gsap.ticker.add((time) => {
-    lenis.raf(time * 1000);
-  });
-  gsap.ticker.lagSmoothing(0);
 
   const scene = new THREE.Scene();
   const camera = new THREE.OrthographicCamera(-1, 1, 1, -1, 0, 1);

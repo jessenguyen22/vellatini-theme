@@ -132,6 +132,11 @@
       <script src="{{ 'product-card-swatch.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer="defer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer="defer"></script>
+    <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js" defer="defer"></script>
+    <script src="{{ 'global-lenis.js' | asset_url }}" defer="defer"></script>
+
     {%- if settings.enable_cart_drawer and template != 'cart' -%}
       {% render 'cart-drawer' %}
     {%- endif -%}

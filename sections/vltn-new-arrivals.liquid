@@ -15,8 +15,8 @@
         "id": {{ product.id | json }},
         "price": {{ product.price | money | json }},
         "product_image": {{ product.featured_image | image_url: width: 800 | json }},
-        "image_left": {{ image_left | image_url: width: 800 | json }},
-        "image_right": {{ image_right | image_url: width: 800 | json }},
+        "image_left": {% if image_left != blank %}{{ image_left | image_url: width: 800 | json }}{% else %}null{% endif %},
+        "image_right": {% if image_right != blank %}{{ image_right | image_url: width: 800 | json }}{% else %}null{% endif %},
         "url": {{ product.url | json }}
       }
     {%- endif -%}
@@ -51,9 +51,6 @@
 </script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" defer="defer"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer="defer"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer="defer"></script>
-<script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js" defer="defer"></script>
 <script src="{{ 'vltn-new-arrivals.js' | asset_url }}" defer="defer"></script>
 
 <script id="vertexShader" type="x-shader/x-vertex">
