@@ -285,11 +285,12 @@
         "product_ewWMQy",
         "product_yVpULg"
       ],
+      "disabled": true,
       "name": "New Arrivals",
       "settings": {
         "title": "New Arrivals",
         "background_color": "rgba(0,0,0,0)",
-        "text_color": "#FFFFFF",
+        "text_color": "#ffffff",
         "outro_text": "Explore the full collection",
         "outro_button_text": "View All",
         "outro_button_link": "",
